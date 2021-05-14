@@ -1,0 +1,11 @@
+[Unit]
+Description=Gxp Fru Device
+StopWhenUnneeded=true
+After=xyz.openbmc_project.CloseMuxes.service dbus.service
+
+[Service]
+ExecStart=/usr/bin/gxp-fru-device
+Type=simple
+
+[Install]
+WantedBy=basic.target
